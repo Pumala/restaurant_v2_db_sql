@@ -91,10 +91,6 @@ select avg(stars) as stars, reviewer.name from review inner join reviewer on rev
 -- 8. get the lowest star rating for each reviewer (reviewer name, lowest star rating)
 select min(star) as stars, reviewer.name from review inner join reviewer on review.author_reviewer_id = reviewer.id group by reviewer.id;
 
-
-
-
-
 -- 9. get the number of restaurants in each category (category name, restaurant count)
 select count(restaurant), category from restaurant group by category;
 
